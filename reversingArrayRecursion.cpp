@@ -13,7 +13,7 @@ void swap(int l, int r, int arr[]){
 }
 
 void swap2(int l, int arr[], int n){
-	if(l>n-l){
+	if(l>=n/2){
 		return;
 	}
 	int temp;
@@ -24,14 +24,14 @@ void swap2(int l, int arr[], int n){
 }
 
 int main(){
-	int arr[5] = {1,2,3,4,5};
+	int arr[6] = {1,2,3,4,5,6};
 	int size = sizeof(arr)/sizeof(arr[0]);
-	swap(0,4,arr);
+	swap(0,5,arr);
 	for(int i: arr){
 		cout << i << " ";
 	}
 	cout << "\n";
-	
+
 	swap2(0,arr, size);
 	for(int i: arr){
 		cout << i << " ";
